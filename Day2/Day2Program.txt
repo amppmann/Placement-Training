@@ -1,0 +1,232 @@
+// Online C++ compiler to run C++ program online
+1check 0#
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int s=0,h=0;
+    
+    string str;
+    cin>>str;
+    for(int i;str[i]!='\0';i++)
+    {
+        if(str[i]=='*')
+        {
+            s++;
+        }
+        else{
+            h++;
+        }
+    }
+    if(s>h) cout<<"Positive";
+    else if(h>s) cout<<"Negative";
+    else cout<<0;
+    
+
+    return 0;
+}
+
+//2check if number palindrome
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    int num;
+    cin>>num;
+    
+    int ch=n;
+    int rev=1;
+    
+    while(num)
+    {
+        int rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }
+    if(rev==ch)
+    {
+        cout<<"is palindrome";
+    }
+    else{
+        cout<<"not palindrome";
+    }
+        
+
+    return 0;
+}
+
+//
+
+//3 check max till previous max
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    // Write C++ code here
+    //int arr[20]={7,4,8,2,9};
+   int n;
+   cin>>n;
+   //int arr[20];
+    int maxi=0;
+    int c=1;
+   
+    //array no need
+   for(int i=0;i<n;i++)
+   {    int temp;
+       cin>>temp;
+       if(i==0)
+       {
+           maxi=temp;
+       }
+       else{
+          if(temp>maxi)
+        {
+            c++;
+            maxi=temp;
+        }
+           
+       }
+   }
+   cout<<c;
+
+
+
+    return 0;
+}
+
+//5max min
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    // Write C++ code here
+    //int arr[20]={7,4,8,2,9};
+   int n;
+   cin>>n;
+   //int arr[20];
+    int max=0;
+    int min=1;
+   
+    //array no need
+   for(int i=0;i<n;i++)
+   {    int temp;
+       cin>>temp;
+       if(i==0)
+       {
+           max=temp;
+           min=temp;
+       }
+       else{
+          if(temp>max)
+        {
+            
+            max=temp;
+        }
+        else if(temp<min)
+        {
+            min=temp;
+        }
+           
+       }
+   }
+   cout<<max<<endl;
+   cout<<min;
+
+
+
+    return 0;
+}
+
+//6 previous max min
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <climits>
+
+int main() {
+    // Write C++ code here
+    //int arr[20]={7,4,8,2,9};
+   int n;
+   cin>>n;
+   //int arr[20];
+    int max=INT_MIN;
+    int min=INT_MAX;
+   int prevMax=0;
+   int prevMin=0;
+    //array no need
+   for(int i=0;i<n;i++)
+   {    int temp;
+       cin>>temp;
+       if(i==0)
+       {
+           max=temp;
+           min=temp;
+       }
+       else{
+          if(temp>max)
+        {
+            prevMax=max;
+            max=temp;
+        }
+        else if(temp<min)
+        {   prevMin=min;
+            min=temp;
+        }
+           
+       }
+   }
+   cout<<prevMax<<endl;
+   cout<<prevMin;
+
+
+
+    return 0;
+}
+
+
+//parking
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() {
+    // Write C++ code here 
+    int r=0;
+    int c=0;
+    cin>>r;
+    cin>>c;
+   int sol=0;
+    int ans=0;
+    for(int i=0;i<r;i++)
+    {      int count=0;
+        for(int j=0;j<c;j++)
+        {
+            int temp;
+            cin>>temp;
+            if(temp)
+            {
+                count++;//use sum variable
+            }
+            
+        }
+        if(count>ans)
+        {
+            ans=count;
+            sol=i+1;
+        }
+    }
+    cout<<sol;
+
+    return 0;
+}
